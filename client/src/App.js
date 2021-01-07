@@ -1,13 +1,15 @@
 import {useState, useEffect} from "react"
 import BookingGrid from "./BookingGrid.js"
-import BookingForm "./BookingForm.js"
+import BookingForm from "./BookingForm.js"
+import {getBookings} from "./BookingService.js"
 
 import './App.css';
 
 function App() {
   const [guestBooking, setGuestBookings] = useState([])
   useEffect(() => {
-    getBookings().then((allBookings) =>{
+    getBookings()
+    .then((allBookings) =>{
       setGuestBookings(allBookings)
     })
   }, [])
