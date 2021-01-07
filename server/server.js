@@ -5,12 +5,12 @@ app.use(parser.json());
 const cors = require('cors');
 app.use(cors());
 const MongoClient = require('mongodb').MongoClient
+const createRouter = require("./helpers/create_router")
 
-
-const createRouter = MongoClient.connect('mongodb://localhost:27017')
+MongoClient.connect('mongodb://localhost:27017')
 .then((client) => {
-  const db = client.db('bookings');
-  const bookingsCollection = db.collection('bookings');
+  const db = client.db('hotel');
+  const bookingsCollection = db.collection('hotel');
   const bookingsRouter = createRouter(bookingsCollection);
   app.use('/api/bookings', bookingsRouter);
 })
