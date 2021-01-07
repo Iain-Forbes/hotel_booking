@@ -8,6 +8,7 @@ const BookingFrom = ({ addBooking }) => {
         setFormData(formData)
     }
 
+
     const onSubmit = (e) => {
         e.preventDefault();
         postBooking(formData)
