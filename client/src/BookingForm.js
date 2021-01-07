@@ -14,7 +14,9 @@ const BookingFrom = ({ addBooking }) => {
         .then(() => {
             addBooking(formData)
         })
-    }
+    } 
+
+   
 
     return(
         <>
@@ -24,15 +26,16 @@ const BookingFrom = ({ addBooking }) => {
         </h3>
         <div>
             <label for="name">Name:</label>
-            <input onChange={onChange} type="text" id="name"/>
+            <input onChange={onChange} type="text" id="name" required/>
         </div>
         <div>
             <label for="email">Email:</label>
-            <input onChange={onChange} type="text" id="email"/>
+            <input onChange={onChange} type="text" id="email" required/>
         </div>
         <div>
             <label for="checkedIn">Checked In?</label>
-            <input onChange={onChange} type="checkbox" id="checkedIn" ></input>
+            <input value="Guest Is Checked In" type="checkbox" id="checkedIn"
+            />
         </div>
         <input type="submit" vaule="save" id="save"/>
         </form>

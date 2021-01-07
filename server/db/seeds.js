@@ -6,16 +6,16 @@ db.hotel.insertMany([
     {
     name: "Joe Bloggs",
     email: 'joe@bloggs.bloggs',
-    checkedIn: 'true'
+    checkedIn: true
     },
     {
     name: "Steve Bloggs",
     email: 'steve@bloggs.bloggs',
-    checkedIn: 'false'
+    checkedIn: false
     },
     {
     name: "Gary Bloggs",
     email: 'gary@bloggs.bloggs',
-    checkedIn: 'false'
+    checkedIn: false
     }
 ])

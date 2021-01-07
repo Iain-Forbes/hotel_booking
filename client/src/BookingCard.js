@@ -7,6 +7,8 @@ const BookingCard = ({booking, delBooking}) => {
         delBooking(booking._id)
         })
     }
+
+// const checkIn = bookings.fliter(booking => booking.checkedIn ) 
     
 return(
     <>

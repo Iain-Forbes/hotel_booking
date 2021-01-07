@@ -27,6 +27,8 @@ function App() {
     setGuestBookings(temp);
   }
 
+  const [checkIn, setcheckIn] = useState([])
+
   return (
     <>
     <BookingGrid bookings={guestBooking} delBooking={delBooking}/>
