@@ -10,9 +10,9 @@ const MongoClient = require('mongodb').MongoClient
 const createRouter = MongoClient.connect('mongodb://localhost:27017')
 .then((client) => {
   const db = client.db('bookings');
-  const sightingsCollection = db.collection('bookings');
-  const sightingsRouter = createRouter(sightingsCollection);
-  app.use('/api/bookings', sightingsRouter);
+  const bookingsCollection = db.collection('bookings');
+  const bookingsRouter = createRouter(bookingsCollection);
+  app.use('/api/bookings', bookingsRouter);
 })
 .catch(console.err);
 
