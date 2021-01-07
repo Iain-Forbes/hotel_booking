@@ -12,7 +12,7 @@ MongoClient.connect('mongodb://localhost:27017')
   const db = client.db('hotel');
   const bookingsCollection = db.collection('hotel');
   const bookingsRouter = createRouter(bookingsCollection);
-  app.use('/api/bookings', bookingsRouter);
+  app.use('/api/bookings/', bookingsRouter);
 })
 .catch(console.err);
 

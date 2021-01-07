@@ -20,8 +20,19 @@ function App() {
     setGuestBookings(temp); 
   }
 
+  const delBooking = (id) => {
+    const temp = guestBooking.map(booking => booking);
+    const bookingToDel = temp.map(booking => booking._id).indexOf(id);
+    temp.splice(bookingToDel, 1);
+    setGuestBookings(temp);
+  }
+
   return (
-    <BookingGrid bookings={guestBooking}/>
+    <>
+    <BookingGrid bookings={guestBooking} delBooking={delBooking}/>
+    <BookingForm addBooking={addBooking}/>
+
+    </>
   );
 }
 
